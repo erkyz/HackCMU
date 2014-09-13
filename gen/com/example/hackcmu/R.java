@@ -866,15 +866,16 @@ containing a value of this type.
         public static final int abc_split_action_bar_is_narrow=0x7f070002;
     }
     public static final class color {
-        public static final int abc_search_url_text_holo=0x7f080008;
+        public static final int abc_search_url_text_holo=0x7f080009;
         public static final int abc_search_url_text_normal=0x7f080000;
         public static final int abc_search_url_text_pressed=0x7f080002;
         public static final int abc_search_url_text_selected=0x7f080001;
-        public static final int black=0x7f080006;
+        public static final int black=0x7f080007;
         public static final int black_overlay=0x7f080003;
-        public static final int dark_gray=0x7f080004;
-        public static final int red=0x7f080007;
-        public static final int white=0x7f080005;
+        public static final int dark_gray=0x7f080005;
+        public static final int hot_pink=0x7f080004;
+        public static final int red=0x7f080008;
+        public static final int white=0x7f080006;
     }
     public static final class dimen {
         /**  Default height of an action bar. 
@@ -1214,13 +1215,15 @@ containing a value of this type.
         public static final int activity_display_message=0x7f030019;
         public static final int activity_i_just_met_you=0x7f03001a;
         public static final int activity_main=0x7f03001b;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001c;
+        public static final int activity_waiting=0x7f03001c;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
     }
     public static final class menu {
         public static final int display_message=0x7f0d0000;
         public static final int i_just_met_you=0x7f0d0001;
         public static final int main=0x7f0d0002;
         public static final int main_activity_actions=0x7f0d0003;
+        public static final int waiting=0x7f0d0004;
     }
     public static final class raw {
         public static final int callme=0x7f050000;
@@ -1276,6 +1279,8 @@ containing a value of this type.
         public static final int title_activity_display_message=0x7f0b0012;
         public static final int title_activity_i_just_met_you=0x7f0b0015;
         public static final int title_activity_main=0x7f0b0011;
+        public static final int title_activity_waiting=0x7f0b0017;
+        public static final int waiting=0x7f0b0018;
     }
     public static final class style {
         /** 

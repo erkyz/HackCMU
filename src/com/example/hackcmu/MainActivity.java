@@ -1,48 +1,28 @@
 package com.example.hackcmu;
 
-import android.app.Activity;
+import java.io.File;
+
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.nfc.NfcAdapter;
 import android.nfc.NfcEvent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
-	NfcAdapter mNfcAdapter;
-	public final static String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
-		mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
 
-        /*
-         * Instantiate a new FileUriCallback to handle requests for
-         * URIs
-         */
-        mFileUriCallback = new FileUriCallback();
-        // Set the dynamic callback for URI requests.
-        mNfcAdapter.setBeamPushUrisCallback(mFileUriCallback,this); 
-		
-		if (mNfcAdapter == null) {
-			Toast.makeText(this, "This device doesn't support NFC.", Toast.LENGTH_LONG).show();
-		}
-		
-		else if (!mNfcAdapter.isEnabled())
-		{
-			Toast.makeText(this, "NFC not enabled.", Toast.LENGTH_LONG).show();
-		}
-		
 		
 	}
 
@@ -59,34 +39,38 @@ public class MainActivity extends ActionBarActivity {
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		switch (item.getItemId()) {
-        case R.id.action_settings:
-            return true;
-        default:
-            return super.onOptionsItemSelected(item);
-    }
+	        case R.id.action_settings:
+	            return true;
+	        default:
+	            return super.onOptionsItemSelected(item);
+		}
+	}
+
+	public void callMe(View view) {
+		Intent intent = new Intent(this, Waiting.class);
+		startActivity(intent);
 	}
 	
-	private Uri[] mFilesUris = new Uri[10];
+	private void handleIntent(Intent intent) {
+		// WILL HANDLE INTENT
+	}
 	
-	//Callback that Android Beam file transfer calls to get files to share
-	
-	private class FileUriCallback implements
-		NfcAdapter.CreateBeamUrisCallback {
-			public FileUriCallback() {
-			}
-			
-			Uri[] mFileUris;
-			
-			@Override
-			public Uri[] createBeamUris(NfcEvent event) {
-				return mFileUris;
-			}
-		}
+	/* Checks if external storage is available for read and write */
+	public boolean isExternalStorageWritable() {
+	    String state = Environment.getExternalStorageState();
+	    if (Environment.MEDIA_MOUNTED.equals(state)) {
+	        return true;
+	    }
+	    return false;
+	}
 
-	private FileUriCallback mFileUriCallback;
-	
-	public void callMe(View view) {
-		Intent intent = new Intent(this, CarlyRae.class);
-		startActivity(intent);
+	/* Checks if external storage is available to at least read */
+	public boolean isExternalStorageReadable() {
+	    String state = Environment.getExternalStorageState();
+	    if (Environment.MEDIA_MOUNTED.equals(state) ||
+	        Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
+	        return true;
+	    }
+	    return false;
 	}
 }

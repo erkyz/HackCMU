@@ -1,21 +1,22 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal" 
+    android:paddingBottom="125dp"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp"
+    android:paddingTop="125dp"
     android:background="@color/white" >
 
     <Button
-        android:layout_marginLeft="50dip"
-        android:layout_marginRight="50dip"
-        android:layout_marginTop="200dip"
-        android:layout_marginBottom="200dip"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:text="@string/call_me_maybe"
         android:onClick="callMe"
         android:background="@drawable/round_background"
         android:alpha="0.75"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:layout_centerInParent="true" />
     
-</LinearLayout>
+</RelativeLayout>

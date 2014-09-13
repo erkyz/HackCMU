@@ -27,7 +27,7 @@ public class I_just_met_you extends Activity {
 			public void run()
 			{
 				try {
-					sleep(3000);
+					sleep(2000);
 					Intent intent = new Intent(THIS, MainActivity.class);
 					startActivity(intent);
 				} catch(InterruptedException ex) {

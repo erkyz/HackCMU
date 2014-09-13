@@ -1,18 +1,21 @@
 package com.example.hackcmu;
 
+import java.io.File;
+
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.TextUtils;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-
 import com.example.hackcmu.util.SystemUiHider;
 
 /**
@@ -49,6 +52,11 @@ public class CarlyRae extends Activity {
 	 * The instance of the {@link SystemUiHider} for this activity.
 	 */
 	private SystemUiHider mSystemUiHider;
+	
+	// A File object containing the path to the transferred files
+    private File mParentPath;
+    // Incoming Intent
+    private Intent mIntent;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +69,8 @@ public class CarlyRae extends Activity {
 		
 		final View controlsView = findViewById(R.id.fullscreen_content_controls);
 		final View contentView = findViewById(R.id.fullscreen_content);
+		
+		handleViewIntent();
 
 		// Set up an instance of SystemUiHider to control the system UI for
 		// this activity.
@@ -188,4 +198,38 @@ public class CarlyRae extends Activity {
 		mHideHandler.removeCallbacks(mHideRunnable);
 		mHideHandler.postDelayed(mHideRunnable, delayMillis);
 	}
+	
+	
+	private void handleViewIntent() {
+		// Get the Intent action
+        mIntent = getIntent();
+        String action = mIntent.getAction();
+        /*
+         * For ACTION_VIEW, the Activity is being asked to display data.
+         * Get the URI.
+         */
+        if (TextUtils.equals(action, Intent.ACTION_VIEW)) {
+            // Get the URI from the Intent
+            Uri beamUri = mIntent.getData();
+            /*
+             * Test for the type of URI, by getting its scheme value
+             */
+//            if (TextUtils.equals(beamUri.getScheme(), "file")) {
+//                mParentPath = handleFileUri(beamUri);
+//            } else if (TextUtils.equals(
+//                    beamUri.getScheme(), "content")) {
+//                mParentPath = handleContentUri(beamUri);
+//            }
+        }
+	}
+	
+	 public String handleFileUri(Uri beamUri) {
+	        // Get the path part of the URI
+	        String fileName = beamUri.getPath();
+	        // Create a File object for this filename
+	        File copiedFile = new File(fileName);
+	        // Get a string containing the file's parent directory
+	        return copiedFile.getParent();
+	    }
+	
 }

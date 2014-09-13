@@ -8,14 +8,13 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_display_message">My Message</string>
 
-    <color name="dark_gray">#080808</color>
-    <color name="white">#FFFFFF</color>
-    <color name="black">#000000</color>
-    <color name="red">#FA0000</color>
 
     <string name="title_activity_carly_rae">CarlyRae</string>
     <string name="desc">Carly</string>
     <string name="title_activity_i_just_met_you">I_just_met_you</string>
-    <string name="just">Hey.\n\nI just met you.\n\nAnd this is crazy.</string>
+    <string name="just">Hey.\n\nI just met you.\n\nAnd this is crazy.\n\nSo..</string>
+    
+    <string name="title_activity_waiting">Waiting</string>
+    <string name="waiting">Just a sec!\nTransfer in Progress.</string>
 
 </resources>
