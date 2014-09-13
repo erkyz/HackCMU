@@ -870,28 +870,16 @@ containing a value of this type.
         public static final int abc_split_action_bar_is_narrow=0x7f080002;
     }
     public static final class color {
-<<<<<<< HEAD
-        public static final int abc_search_url_text_holo=0x7f080009;
-        public static final int abc_search_url_text_normal=0x7f080000;
-        public static final int abc_search_url_text_pressed=0x7f080002;
-        public static final int abc_search_url_text_selected=0x7f080001;
-        public static final int black=0x7f080007;
-        public static final int black_overlay=0x7f080003;
-        public static final int dark_gray=0x7f080005;
-        public static final int hot_pink=0x7f080004;
-        public static final int red=0x7f080008;
-        public static final int white=0x7f080006;
-=======
-        public static final int abc_search_url_text_holo=0x7f090008;
+        public static final int abc_search_url_text_holo=0x7f090009;
         public static final int abc_search_url_text_normal=0x7f090000;
         public static final int abc_search_url_text_pressed=0x7f090002;
         public static final int abc_search_url_text_selected=0x7f090001;
-        public static final int black=0x7f090006;
+        public static final int black=0x7f090007;
         public static final int black_overlay=0x7f090003;
-        public static final int dark_gray=0x7f090004;
-        public static final int red=0x7f090007;
-        public static final int white=0x7f090005;
->>>>>>> 08aa25cf214ee5aa87f9ce05e0ab62bfbe9c9486
+        public static final int dark_gray=0x7f090005;
+        public static final int hot_pink=0x7f090004;
+        public static final int red=0x7f090008;
+        public static final int white=0x7f090006;
     }
     public static final class dimen {
         /**  Default height of an action bar. 
@@ -1107,11 +1095,13 @@ containing a value of this type.
         public static final int abc_textfield_searchview_holo_light=0x7f020054;
         public static final int abc_textfield_searchview_right_holo_dark=0x7f020055;
         public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
-        public static final int carly=0x7f020057;
-        public static final int ic_action_person=0x7f020058;
-        public static final int ic_action_settings=0x7f020059;
-        public static final int ic_launcher=0x7f02005a;
-        public static final int round_background=0x7f02005b;
+        public static final int blur=0x7f020057;
+        public static final int carly=0x7f020058;
+        public static final int ic_action_person=0x7f020059;
+        public static final int ic_action_settings=0x7f02005a;
+        public static final int ic_launcher=0x7f02005b;
+        public static final int logo=0x7f02005c;
+        public static final int round_background=0x7f02005d;
     }
     public static final class id {
         public static final int action_bar=0x7f07001c;
@@ -1230,24 +1220,11 @@ containing a value of this type.
         public static final int abc_search_view=0x7f030016;
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_carly_rae=0x7f030018;
-<<<<<<< HEAD
-        public static final int activity_display_message=0x7f030019;
-        public static final int activity_i_just_met_you=0x7f03001a;
-        public static final int activity_main=0x7f03001b;
-        public static final int activity_waiting=0x7f03001c;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
-    }
-    public static final class menu {
-        public static final int display_message=0x7f0d0000;
-        public static final int i_just_met_you=0x7f0d0001;
-        public static final int main=0x7f0d0002;
-        public static final int main_activity_actions=0x7f0d0003;
-        public static final int waiting=0x7f0d0004;
-=======
         public static final int activity_i_just_met_you=0x7f030019;
         public static final int activity_main=0x7f03001a;
         public static final int activity_people=0x7f03001b;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001c;
+        public static final int activity_waiting=0x7f03001c;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
     }
     public static final class menu {
         public static final int display_message=0x7f0f0000;
@@ -1255,7 +1232,7 @@ containing a value of this type.
         public static final int main=0x7f0f0002;
         public static final int main_activity_actions=0x7f0f0003;
         public static final int people=0x7f0f0004;
->>>>>>> 08aa25cf214ee5aa87f9ce05e0ab62bfbe9c9486
+        public static final int waiting=0x7f0f0005;
     }
     public static final class raw {
         public static final int callme=0x7f060000;
@@ -1300,21 +1277,6 @@ containing a value of this type.
         public static final int abc_shareactionprovider_share_with=0x7f0c000c;
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
-<<<<<<< HEAD
-        public static final int abc_shareactionprovider_share_with_application=0x7f0b000b;
-        public static final int action_settings=0x7f0b000e;
-        public static final int app_name=0x7f0b000d;
-        public static final int call_me_maybe=0x7f0b0010;
-        public static final int desc=0x7f0b0014;
-        public static final int edit_message=0x7f0b000f;
-        public static final int just=0x7f0b0016;
-        public static final int title_activity_carly_rae=0x7f0b0013;
-        public static final int title_activity_display_message=0x7f0b0012;
-        public static final int title_activity_i_just_met_you=0x7f0b0015;
-        public static final int title_activity_main=0x7f0b0011;
-        public static final int title_activity_waiting=0x7f0b0017;
-        public static final int waiting=0x7f0b0018;
-=======
         public static final int abc_shareactionprovider_share_with_application=0x7f0c000b;
         public static final int action_people=0x7f0c0013;
         public static final int action_settings=0x7f0c000e;
@@ -1322,37 +1284,37 @@ containing a value of this type.
         public static final int call_me_maybe=0x7f0c0010;
         public static final int desc=0x7f0c0015;
         public static final int edit_message=0x7f0c000f;
-        public static final int hello_world=0x7f0c0018;
         public static final int just=0x7f0c0017;
-        public static final int pref_email=0x7f0c001d;
-        public static final int pref_facebook_link=0x7f0c001f;
+        public static final int pref_email=0x7f0c001e;
+        public static final int pref_facebook_link=0x7f0c0020;
         /**  Strings related to Settings 
  Example General settings 
          */
-        public static final int pref_header_contact=0x7f0c001b;
-        public static final int pref_header_interests=0x7f0c0021;
+        public static final int pref_header_contact=0x7f0c001c;
+        public static final int pref_header_interests=0x7f0c0022;
         /**  Example settings for Notifications 
          */
-        public static final int pref_header_notifications=0x7f0c0027;
-        public static final int pref_interest_five=0x7f0c0026;
-        public static final int pref_interest_four=0x7f0c0025;
-        public static final int pref_interest_one=0x7f0c0022;
-        public static final int pref_interest_three=0x7f0c0024;
-        public static final int pref_interest_two=0x7f0c0023;
-        public static final int pref_name=0x7f0c001c;
-        public static final int pref_phone_number=0x7f0c001e;
-        public static final int pref_ringtone_silent=0x7f0c002a;
-        public static final int pref_title_new_message_notifications=0x7f0c0028;
-        public static final int pref_title_ringtone=0x7f0c0029;
-        public static final int pref_title_vibrate=0x7f0c002b;
-        public static final int pref_twitter_link=0x7f0c0020;
+        public static final int pref_header_notifications=0x7f0c0028;
+        public static final int pref_interest_five=0x7f0c0027;
+        public static final int pref_interest_four=0x7f0c0026;
+        public static final int pref_interest_one=0x7f0c0023;
+        public static final int pref_interest_three=0x7f0c0025;
+        public static final int pref_interest_two=0x7f0c0024;
+        public static final int pref_name=0x7f0c001d;
+        public static final int pref_phone_number=0x7f0c001f;
+        public static final int pref_ringtone_silent=0x7f0c002b;
+        public static final int pref_title_new_message_notifications=0x7f0c0029;
+        public static final int pref_title_ringtone=0x7f0c002a;
+        public static final int pref_title_vibrate=0x7f0c002c;
+        public static final int pref_twitter_link=0x7f0c0021;
         public static final int title_activity_carly_rae=0x7f0c0014;
         public static final int title_activity_display_message=0x7f0c0012;
         public static final int title_activity_i_just_met_you=0x7f0c0016;
         public static final int title_activity_main=0x7f0c0011;
-        public static final int title_activity_people=0x7f0c0019;
-        public static final int title_activity_settings=0x7f0c001a;
->>>>>>> 08aa25cf214ee5aa87f9ce05e0ab62bfbe9c9486
+        public static final int title_activity_people=0x7f0c001a;
+        public static final int title_activity_settings=0x7f0c001b;
+        public static final int title_activity_waiting=0x7f0c0018;
+        public static final int waiting=0x7f0c0019;
     }
     public static final class style {
         /** 
@@ -1383,7 +1345,8 @@ containing a value of this type.
         public static final int AppTheme=0x7f0d008c;
         public static final int ButtonBar=0x7f0d008e;
         public static final int ButtonBarButton=0x7f0d008f;
-        public static final int FullscreenActionBarStyle=0x7f0d0090;
+        public static final int CustomActionBarTheme=0x7f0d0090;
+        public static final int FullscreenActionBarStyle=0x7f0d0091;
         public static final int FullscreenTheme=0x7f0d008d;
         /**  Mimic text appearance in select_dialog_item.xml 
          */

@@ -68,7 +68,6 @@ public class MainActivity extends ActionBarActivity {
 				return mFileUris;
 			}
 		}
-	}
 
 	public void callMe(View view) {
 		Intent intent = new Intent(this, Waiting.class);

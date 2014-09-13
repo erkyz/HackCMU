@@ -7,7 +7,7 @@
     android:paddingLeft="50dp"
     android:paddingRight="50dp"
     android:paddingTop="125dp"
-    android:background="@color/white" >
+    android:background="@drawable/blur" >
 
 	<Button
         android:layout_width="fill_parent"
@@ -17,6 +17,7 @@
         android:background="@drawable/round_background"
         android:alpha="0.75"
         android:textColor="@color/white"
+        android:textSize="38sp"
         android:layout_centerInParent="true" />
     
 </RelativeLayout>
