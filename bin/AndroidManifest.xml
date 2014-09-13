@@ -46,9 +46,10 @@
         <activity
             android:name=".Waiting"
             android:label="@string/title_activity_waiting" >
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
+             <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+    			<category android:name="android.intent.category.CATEGORY_DEFAULT" />
+    			<data android:mimeType="application/vnd.com.example.android.beam" />
             </intent-filter>
         </activity>
         <activity

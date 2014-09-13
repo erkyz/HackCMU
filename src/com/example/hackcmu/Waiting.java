@@ -34,7 +34,6 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 public class Waiting extends Activity {
-	public static String mParentPath;
 	public static String peopleMetFile = "people_met";
 
 	// A File object containing the path to the transferred files
@@ -65,27 +64,38 @@ public class Waiting extends Activity {
          * Instantiate a new FileUriCallback to handle requests for
          * URIs
          */
-        mFileUriCallback = new FileUriCallback();
+//        mFileUriCallback = new FileUriCallback();
         // Set the dynamic callback for URI requests.
-        mNfcAdapter.setBeamPushUrisCallback(mFileUriCallback,this); 
+//        mNfcAdapter.setBeamPushUrisCallback(mFileUriCallback,this); 
+//        mNfcAdapter.setNdefPushMessage(message, activity, activities)
 		
         /*
          * Create a list of URIs, get a File,
          * and set its permissions
          */
-        
+//        Log.d("hi", "hi there");
         Uri[] mFileUris = new Uri[1];
-        String transferFile = "PLACEHOLDER.txt";
         File extDir = getExternalFilesDir(null);
-        File requestFile = new File(extDir, transferFile);
+        File requestFile = new File(extDir, "info.txt");
+//        try {
+//			BufferedReader in = new BufferedReader(new FileReader(requestFile));
+//			String line;
+//			while((line = in.readLine()) != "") {
+//				Log.d("hi", line);
+//			}
+//			in.close();
+//		} catch (FileNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+        
         // Get a URI for the File and add it to the list of URIs
         Uri external = Uri.fromFile(requestFile);
-        
-        if (external != null) {
-            mFileUris[0] = external;
-        } else {
-            Log.e("My Activity", "No File URI available for file.");
-        }
+
+        mNfcAdapter.setBeamPushUris(new Uri[] {external}, this);
 	}
 
 	@Override
@@ -106,7 +116,6 @@ public class Waiting extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-	
 
 	private class FileUriCallback implements NfcAdapter.CreateBeamUrisCallback {
 		public FileUriCallback() {
@@ -122,8 +131,10 @@ public class Waiting extends Activity {
 
 	private FileUriCallback mFileUriCallback;
 	
-	protected void onNewIntent(Bundle savedInstanceState) {
+	protected void onNewIntent(Bundle savedInstanceState) throws FileNotFoundException {
 		super.onCreate(savedInstanceState);
+		
+		finish();
 
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);

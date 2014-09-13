@@ -1,8 +1,10 @@
 package com.example.hackcmu;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -27,7 +29,6 @@ public class MainActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		File file = new File(getFilesDir(), "info.txt");
 		SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
 		String[] information = new String[10];
 		String interest1 = preferences.getString("pref_interest_one", "Unnamed");
@@ -54,9 +55,11 @@ public class MainActivity extends ActionBarActivity {
 		
 		String result = "";
 		for (int i = 0; i < information.length; i++) {
-			result += "information[i]\n";
+			result += information[i] + "\n";
 		}
-		writeToFile(result);
+		
+		File file = new File("/storage/emulated/0/Android/data/com.example.hackcmu/files", "info.txt");
+		writeToFile(result, file);
 	}
 
 	@Override
@@ -130,11 +133,14 @@ public class MainActivity extends ActionBarActivity {
 	    return false;
 	}
 	
-	private void writeToFile(String data) {
+	private void writeToFile(String data, File file) {
 	    try {
-	        OutputStreamWriter outputStreamWriter = new OutputStreamWriter(openFileOutput("info.txt", MODE_PRIVATE));
-	        outputStreamWriter.write(data);
-	        outputStreamWriter.close();
+	        FileOutputStream f = new FileOutputStream(file);
+	        PrintWriter p = new PrintWriter(f);
+	        p.print(data);
+	        p.flush();
+	        p.close();
+	        f.close();
 	    }
 	    catch (IOException e) {
 	        Log.e("Exception", "File write failed: " + e.toString());
