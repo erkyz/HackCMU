@@ -1115,8 +1115,8 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f070016;
         public static final int action_menu_presenter=0x7f070017;
         public static final int action_mode_close_button=0x7f070024;
-        public static final int action_people=0x7f07003f;
-        public static final int action_settings=0x7f07003e;
+        public static final int action_people=0x7f070040;
+        public static final int action_settings=0x7f07003f;
         public static final int activity_chooser_view_content=0x7f070025;
         public static final int always=0x7f07000b;
         public static final int beginning=0x7f070011;
@@ -1139,6 +1139,7 @@ containing a value of this type.
         public static final int image=0x7f070027;
         public static final int listMode=0x7f070001;
         public static final int list_item=0x7f070029;
+        public static final int listview=0x7f07003e;
         public static final int middle=0x7f070012;
         public static final int never=0x7f070009;
         public static final int none=0x7f070010;
@@ -1330,7 +1331,6 @@ containing a value of this type.
         Base application theme for API 11+. This theme completely replaces
         AppBaseTheme from res/values/styles.xml on API 11+ devices.
     
- API 11 theme customizations can go here. 
 
         Base application theme for API 14+. This theme completely replaces
         AppBaseTheme from BOTH res/values/styles.xml and

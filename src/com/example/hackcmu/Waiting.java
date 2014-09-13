@@ -1,11 +1,19 @@
 package com.example.hackcmu;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 import com.example.hackcmu.util.SystemUiHider;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.media.MediaPlayer;
@@ -27,8 +35,10 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 public class Waiting extends Activity {
+	public static String mParentPath;
+	public static String peopleMetFile = "people_met";
+
 	// A File object containing the path to the transferred files
-    private String mParentPath;
     // Incoming Intent
     private Intent mIntent;
 	NfcAdapter mNfcAdapter;
@@ -148,7 +158,7 @@ public class Waiting extends Activity {
 		thread.start();
 	}
 
-		private void handleViewIntent() {
+		private void handleViewIntent() throws FileNotFoundException {
 			// Get the Intent action
 	        mIntent = getIntent();
 	        String action = mIntent.getAction();
@@ -164,7 +174,38 @@ public class Waiting extends Activity {
 	             */
 	            if (TextUtils.equals(beamUri.getScheme(), "file")) {
 	                mParentPath = handleFileUri(beamUri);
+	                URI uri = null;
+	        		try {
+	        			uri = new URI(mParentPath);
+	        		} catch (URISyntaxException e) {
+	        			// TODO Auto-generated catch block
+	        			e.printStackTrace();
+	        		}
+	                File file = new File(uri);
+	                BufferedReader in = null;
+	        		try {
+	        			in = new BufferedReader(new FileReader(file));
+	        		} catch (FileNotFoundException e) {
+	        			// TODO Auto-generated catch block
+	        			e.printStackTrace();
+	        		}
+	        		FileOutputStream fos = openFileOutput(peopleMetFile, Context.MODE_PRIVATE);
+	        		String string = "";
+	                try {
+	        			for(int i = 0; i < 10; i++) {
+	        				String line = in.readLine();
+	        				string += line + "\n";
+	        			}
+        				Toast.makeText(this, string, Toast.LENGTH_LONG).show();
+        				fos.write(string.getBytes());
+        				fos.close();
+	        		} catch (IOException e) {
+	        			// TODO Auto-generated catch block
+	        			e.printStackTrace();
+	        		}
+	                
 	            }
+	            
 	        }
 		}
 		
