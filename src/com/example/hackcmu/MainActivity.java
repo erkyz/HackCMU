@@ -132,7 +132,7 @@ public class MainActivity extends ActionBarActivity {
 	
 	private void writeToFile(String data) {
 	    try {
-	        OutputStreamWriter outputStreamWriter = new OutputStreamWriter(openFileOutput("information.txt", MODE_PRIVATE));
+	        OutputStreamWriter outputStreamWriter = new OutputStreamWriter(openFileOutput("info.txt", MODE_PRIVATE));
 	        outputStreamWriter.write(data);
 	        outputStreamWriter.close();
 	    }
