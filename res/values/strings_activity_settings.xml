@@ -1,0 +1,45 @@
+<resources>
+
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+
+    <!-- Example General settings -->
+    <string name="pref_header_contact">Contact Info</string>
+    <string name="pref_name">Name</string>
+    <string name="pref_email">Email</string>
+    <string name="pref_phone_number">Phone Number</string>
+    <string name="pref_facebook_link">Facebook Link</string>
+    <string name="pref_twitter_link">Twitter Link</string>
+    
+    <string name="pref_header_interests">Interests</string>
+    <string name="pref_interest_one">Interest One</string>
+    <string name="pref_interest_two">Interest Two</string>
+    <string name="pref_interest_three">Interest Three</string>
+    <string name="pref_interest_four">Interest Four</string>
+    <string name="pref_interest_five">Interest Five</string>
+                
+                    
+    
+
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+    <string name="pref_title_vibrate">Vibrate</string>
+    
+
+</resources>

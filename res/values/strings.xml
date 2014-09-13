@@ -7,6 +7,7 @@
     <string name="call_me_maybe">Call Me Maybe?</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_display_message">My Message</string>
+    <string name="action_people">People Met</string>
 
     <color name="dark_gray">#080808</color>
     <color name="white">#FFFFFF</color>
@@ -17,5 +18,7 @@
     <string name="desc">Carly</string>
     <string name="title_activity_i_just_met_you">I_just_met_you</string>
     <string name="just">Hey.\n\nI just met you.\n\nAnd this is crazy.</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_people">People Met</string>
 
 </resources>

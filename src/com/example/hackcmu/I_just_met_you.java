@@ -32,6 +32,7 @@ public class I_just_met_you extends Activity {
 					startActivity(intent);
 				} catch(InterruptedException ex) {
 					Thread.currentThread().interrupt();
+					
 				}
 			}
 		};

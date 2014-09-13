@@ -1,8 +1,6 @@
 package com.example.hackcmu;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.nfc.NfcAdapter;
 import android.nfc.NfcEvent;
@@ -12,7 +10,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
@@ -23,25 +20,25 @@ public class MainActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
-		mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
-
-        /*
-         * Instantiate a new FileUriCallback to handle requests for
-         * URIs
-         */
-        mFileUriCallback = new FileUriCallback();
-        // Set the dynamic callback for URI requests.
-        mNfcAdapter.setBeamPushUrisCallback(mFileUriCallback,this); 
-		
-		if (mNfcAdapter == null) {
-			Toast.makeText(this, "This device doesn't support NFC.", Toast.LENGTH_LONG).show();
-		}
-		
-		else if (!mNfcAdapter.isEnabled())
-		{
-			Toast.makeText(this, "NFC not enabled.", Toast.LENGTH_LONG).show();
-		}
+//		
+//		mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
+//
+//        /*
+//         * Instantiate a new FileUriCallback to handle requests for
+//         * URIs
+//         */
+//        mFileUriCallback = new FileUriCallback();
+//        // Set the dynamic callback for URI requests.
+//        mNfcAdapter.setBeamPushUrisCallback(mFileUriCallback,this); 
+//		
+//		if (mNfcAdapter == null) {
+//			Toast.makeText(this, "This device doesn't support NFC.", Toast.LENGTH_LONG).show();
+//		}
+//		
+//		else if (!mNfcAdapter.isEnabled())
+//		{
+//			Toast.makeText(this, "NFC not enabled.", Toast.LENGTH_LONG).show();
+//		}
 		
 		
 	}
@@ -59,11 +56,17 @@ public class MainActivity extends ActionBarActivity {
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		switch (item.getItemId()) {
-        case R.id.action_settings:
-            return true;
-        default:
-            return super.onOptionsItemSelected(item);
-    }
+	        case R.id.action_settings:
+	    		Intent intent = new Intent(this, SettingsActivity.class);
+	    		startActivity(intent);
+	            return true;
+	        case R.id.action_people:
+	        	Intent intent1 = new Intent(this, People.class);
+	        	startActivity(intent1);
+	        	return true;
+	        default:
+	            return super.onOptionsItemSelected(item);
+		}
 	}
 	
 	private Uri[] mFilesUris = new Uri[10];

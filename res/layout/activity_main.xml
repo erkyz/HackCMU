@@ -5,7 +5,7 @@
     android:orientation="horizontal" 
     android:background="@color/white" >
 
-    <Button
+	<Button
         android:layout_marginLeft="50dip"
         android:layout_marginRight="50dip"
         android:layout_marginTop="200dip"
@@ -17,5 +17,6 @@
         android:background="@drawable/round_background"
         android:alpha="0.75"
         android:textColor="@color/white" />
+    
     
 </LinearLayout>
