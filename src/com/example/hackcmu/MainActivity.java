@@ -1,29 +1,62 @@
 package com.example.hackcmu;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.nfc.NfcAdapter;
 import android.nfc.NfcEvent;
 import android.os.Bundle;
 import android.os.Environment;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
-	
+		
+		File file = new File(getFilesDir(), "info.txt");
+		SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+		String[] information = new String[10];
+		String interest1 = preferences.getString("pref_interest_one", "Unnamed");
+		String interest2 = preferences.getString("pref_interest_two", "Unnamed");
+		String interest3 = preferences.getString("pref_interest_three", "Unnamed");
+		String interest4 = preferences.getString("pref_interest_four", "Unnamed");
+		String interest5 = preferences.getString("pref_interest_five", "Unnamed");
+		String name = preferences.getString("pref_name", "Unnamed");
+		String phone = preferences.getString("pref_phone_number", "No Phone");
+		String facebook = preferences.getString("pref_facebook_link", "No Facebook");
+		String twitter = preferences.getString("pref_twitter_link", "No Twitter");
+		String email = preferences.getString("pref_email", "No Email");
+		
+		information[0] = interest1;
+		information[1] = interest2;
+		information[2] = interest3;
+		information[3] = interest4;
+		information[4] = interest5;
+		information[5] = name;
+		information[6] = phone;
+		information[7] = facebook;
+		information[8] = twitter;
+		information[9] = email;
+		
+		String result = "";
+		for (int i = 0; i < information.length; i++) {
+			result += "information[i]\n";
+		}
+		writeToFile(result);
 	}
 
 	@Override
@@ -95,5 +128,16 @@ public class MainActivity extends ActionBarActivity {
 	        return true;
 	    }
 	    return false;
+	}
+	
+	private void writeToFile(String data) {
+	    try {
+	        OutputStreamWriter outputStreamWriter = new OutputStreamWriter(openFileOutput("information.txt", MODE_PRIVATE));
+	        outputStreamWriter.write(data);
+	        outputStreamWriter.close();
+	    }
+	    catch (IOException e) {
+	        Log.e("Exception", "File write failed: " + e.toString());
+	    } 
 	}
 }

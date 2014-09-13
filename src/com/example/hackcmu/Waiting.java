@@ -1,9 +1,7 @@
 package com.example.hackcmu;
 
 import java.io.File;
-
 import com.example.hackcmu.util.SystemUiHider;
-
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
@@ -28,7 +26,7 @@ import android.widget.Toast;
 
 public class Waiting extends Activity {
 	// A File object containing the path to the transferred files
-    private String mParentPath;
+    public static String mParentPath;
     // Incoming Intent
     private Intent mIntent;
 	NfcAdapter mNfcAdapter;
