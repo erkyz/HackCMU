@@ -1,0 +1,48 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceScreen
+        android:title="@string/pref_header_contact"
+        android:key="pref_key_interests"
+        android:persistent="true">
+	    <EditTextPreference
+	        android:capitalize="words"
+	        android:inputType="textCapWords"
+	        android:key="pref_name"
+	        android:maxLines="1"
+	        android:selectAllOnFocus="true"
+	        android:singleLine="true"
+	        android:title="@string/pref_name" />
+	    <EditTextPreference
+	        android:capitalize="words"
+	        android:inputType="textCapWords"
+	        android:key="pref_email"
+	        android:maxLines="1"
+	        android:selectAllOnFocus="true"
+	        android:singleLine="true"
+	        android:title="@string/pref_email" />
+	    <EditTextPreference
+	        android:capitalize="words"
+	        android:inputType="textCapWords"
+	        android:key="pref_phone_numer"
+	        android:maxLines="1"
+	        android:selectAllOnFocus="true"
+	        android:singleLine="true"
+	        android:title="@string/pref_phone_number" />
+	    <EditTextPreference
+	        android:capitalize="words"
+	        android:inputType="textCapWords"
+	        android:key="pref_facebook_link"
+	        android:maxLines="1"
+	        android:selectAllOnFocus="true"
+	        android:singleLine="true"
+	        android:title="@string/pref_facebook_link" />
+	    <EditTextPreference
+	        android:capitalize="words"
+	        android:inputType="textCapWords"
+	        android:key="pref_twitter_link"
+	        android:maxLines="1"
+	        android:selectAllOnFocus="true"
+	        android:singleLine="true"
+	        android:title="@string/pref_twitter_link" />
+	</PreferenceScreen>
+
+</PreferenceScreen>

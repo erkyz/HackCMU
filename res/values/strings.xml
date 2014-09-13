@@ -7,6 +7,7 @@
     <string name="call_me_maybe">Call Me Maybe?</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_display_message">My Message</string>
+    <string name="action_people">People Met</string>
 
 
     <string name="title_activity_carly_rae">CarlyRae</string>
@@ -16,5 +17,6 @@
     
     <string name="title_activity_waiting">Waiting</string>
     <string name="waiting">Just a sec!\nTransfer in Progress.</string>
+    <string name="title_activity_people">People Met</string>
 
 </resources>

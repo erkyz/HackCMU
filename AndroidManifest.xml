@@ -29,14 +29,6 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".DisplayMessageActivity"
-            android:label="@string/title_activity_display_message"
-            android:parentActivityName=".MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.hackcmu.MainActivity" />
-        </activity>
-        <activity
             android:name=".CarlyRae"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_carly_rae"
@@ -57,6 +49,16 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainActivity" >
+        </activity>
+        <activity
+            android:name=".People"
+            android:label="@string/title_activity_people"
+            android:parentActivityName=".MainActivity" >
         </activity>
     </application>
 

@@ -1,0 +1,49 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceScreen 
+        android:title="@string/pref_header_interests"
+        android:key="pref_key_interests"
+        android:persistent="true">
+		<EditTextPreference
+	        android:capitalize="words"
+	        android:inputType="textCapWords"
+	        android:key="pref_interest_one"
+	        android:maxLines="1"
+	        android:selectAllOnFocus="true"
+	        android:singleLine="true"
+	        android:title="@string/pref_interest_one"
+	        android:summary="hi" />
+	    <EditTextPreference
+	        android:capitalize="words"
+	        android:inputType="textCapWords"
+	        android:key="pref_interest_two"
+	        android:maxLines="1"
+	        android:selectAllOnFocus="true"
+	        android:singleLine="true"
+	        android:title="@string/pref_interest_two" />
+	    <EditTextPreference
+	        android:capitalize="words"
+	        android:inputType="textCapWords"
+	        android:key="pref_interest_three"
+	        android:maxLines="1"
+	        android:selectAllOnFocus="true"
+	        android:singleLine="true"
+	        android:title="@string/pref_interest_three" />
+	    <EditTextPreference
+	        android:capitalize="words"
+	        android:inputType="textCapWords"
+	        android:key="pref_interest_four"
+	        android:maxLines="1"
+	        android:selectAllOnFocus="true"
+	        android:singleLine="true"
+	        android:title="@string/pref_interest_four" />
+	    <EditTextPreference
+	        android:capitalize="words"
+	        android:inputType="textCapWords"
+	        android:key="pref_interest_five"
+	        android:maxLines="1"
+	        android:selectAllOnFocus="true"
+	        android:singleLine="true"
+	        android:title="@string/pref_interest_five" />
+	</PreferenceScreen>
+
+</PreferenceScreen>

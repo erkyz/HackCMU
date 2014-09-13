@@ -23,7 +23,7 @@ public class MainActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		
+	
 	}
 
 	@Override
@@ -40,9 +40,33 @@ public class MainActivity extends ActionBarActivity {
 		// as you specify a parent activity in AndroidManifest.xml.
 		switch (item.getItemId()) {
 	        case R.id.action_settings:
+	    		Intent intent = new Intent(this, SettingsActivity.class);
+	    		startActivity(intent);
 	            return true;
+	        case R.id.action_people:
+	        	Intent intent1 = new Intent(this, People.class);
+	        	startActivity(intent1);
+	        	return true;
 	        default:
 	            return super.onOptionsItemSelected(item);
+		}
+	}
+	
+	private Uri[] mFilesUris = new Uri[10];
+	
+	//Callback that Android Beam file transfer calls to get files to share
+	
+	private class FileUriCallback implements
+		NfcAdapter.CreateBeamUrisCallback {
+			public FileUriCallback() {
+			}
+			
+			Uri[] mFileUris;
+			
+			@Override
+			public Uri[] createBeamUris(NfcEvent event) {
+				return mFileUris;
+			}
 		}
 	}
 
